@@ -6,3 +6,6 @@ Se debe tener un contador dentro de la pantalla de juego sobre las balas para ev
 
 ## Código
 El código estará disponible para descargar. Si desea saber más sobre el código, puede entrar a la documentación en _BulletHell.pdf_. 
+
+## Video
+https://youtu.be/uRq2DusE8n0
