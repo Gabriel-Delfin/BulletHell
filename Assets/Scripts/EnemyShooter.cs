@@ -36,6 +36,7 @@ public class EnemyShooter : MonoBehaviour
         }
     }
 
+    // Cambia el disparo de la bala acorde al patrón
     void Shoot()
     {
         nextFireTime = Time.time + fireRate;
@@ -101,8 +102,8 @@ public class EnemyShooter : MonoBehaviour
     void Pattern3()
     {
         // Disparar en forma de círculo
-        int bulletCount = 10; // Número de balas en el círculo
-        float circleRadius = 1f; // Radio del círculo
+        int bulletCount = 10;
+        float circleRadius = 1f;
         float angleStep = 360f / bulletCount;
 
         for (int i = 0; i < bulletCount; i++)

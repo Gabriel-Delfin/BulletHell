@@ -15,6 +15,7 @@ public class EnemyMovement : MonoBehaviour
         initialPosition = transform.position;
     }
 
+    // Movemos en el eje x
     void Update()
     {
         if (isMovingRight)
@@ -33,17 +34,5 @@ public class EnemyMovement : MonoBehaviour
                 isMovingRight = true;
             }
         }
-    }
-
-    // Método para habilitar el movimiento lateral
-    public void EnableSideToSideMovement()
-    {
-        enabled = true;
-    }
-
-    // Método para deshabilitar el movimiento lateral
-    public void DisableSideToSideMovement()
-    {
-        enabled = false;
     }
 }

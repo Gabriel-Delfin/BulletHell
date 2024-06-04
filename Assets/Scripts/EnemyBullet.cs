@@ -25,19 +25,10 @@ public class EnemyBullet : MonoBehaviour
         Move();
     }
 
+    // Nos permite establecer la dirección de la bala
     public void SetDirection(Vector2 newDirection)
     {
         direction = newDirection.normalized;
-    }
-
-    // Método para actualizar la dirección de la bala para seguir a la nave enemiga
-    public void UpdateDirection(Vector3 targetPosition)
-    {
-        // Calcular la dirección hacia el objetivo (en este caso, la posición de la nave enemiga)
-        Vector3 directionToTarget = (targetPosition - transform.position).normalized;
-
-        // Actualizar la dirección de la bala
-        direction = directionToTarget;
     }
 
     void Move()
@@ -45,6 +36,7 @@ public class EnemyBullet : MonoBehaviour
         transform.position += (Vector3)direction * speed * Time.deltaTime;
     }
 
+    // Nos permite destruir GameObjects (jugador y bala)
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
@@ -54,6 +46,7 @@ public class EnemyBullet : MonoBehaviour
         }
     }
 
+    // Destruimos la bala cuando salga de escena
     void OnBecameInvisible()
     {
         DestroyBullet();

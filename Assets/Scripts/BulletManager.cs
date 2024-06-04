@@ -4,6 +4,8 @@ using TMPro;
 
 public class BulletManager : MonoBehaviour
 {
+
+    // Variables para mostrar en la interfaz de usuario
     public TextMeshProUGUI bulletCounterText;
     private List<GameObject> activeBullets = new List<GameObject>();
 
@@ -15,11 +17,13 @@ public class BulletManager : MonoBehaviour
 
     public void RegisterBullet(GameObject bullet)
     {
+        // Registra las balas activas
         activeBullets.Add(bullet);
     }
 
     public void UnregisterBullet(GameObject bullet)
     {
+        // Elimina las balas de la lista
         activeBullets.Remove(bullet);
     }
 }
